@@ -26,8 +26,9 @@ public class CarController : MonoBehaviour
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+        
     }
-
+    
     private void GetInput()
     {
         // Steering Input
