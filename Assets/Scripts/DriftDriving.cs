@@ -8,6 +8,7 @@ public class DriftDriving : MonoBehaviour
     [SerializeField] private GameObject powerEngine;
     [SerializeField] private GameObject CM;
     [SerializeField] private float Gas;
+    [SerializeField] private float GasCorrection;
     [SerializeField] private float Turn;
     private float horizontalInput;
     private float verticalInput;

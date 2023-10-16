@@ -29,10 +29,10 @@ public class CarController1 : MonoBehaviour
         foreach (GameObject spring in springs)
         {
             RaycastHit hit;
-            if (Physics.Raycast(spring.transform.position, transform.TransformDirection(Vector3.down), out hit, 3f))
+            if (Physics.Raycast(spring.transform.position, transform.TransformDirection(Vector3.down), out hit, 1f))
             {
                 Debug.Log("SpringHitGround");
-                carRigidbody.AddForceAtPosition(Time.deltaTime * transform.TransformDirection(Vector3.down) * Mathf.Pow(3f - hit.distance, 2)/3f * 250f, spring.transform.position);
+                carRigidbody.AddForceAtPosition(Time.deltaTime * transform.TransformDirection(Vector3.up) * 10000f, spring.transform.position);
             }
             Debug.Log(hit.distance);
         }
