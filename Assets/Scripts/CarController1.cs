@@ -18,35 +18,25 @@ public class CarController1 : MonoBehaviour
     void Start()
     {
         carRigidbody.centerOfMass = CM.transform.localPosition;
+        Debug.Log(CM.transform.position);
+        Debug.Log(carRigidbody.centerOfMass);
     }
 
     void Update()
     {
-        GetInput();
-        carRigidbody.AddForceAtPosition(Time.deltaTime * transform.TransformDirection(Vector3.forward) * verticalInput * Gas, powerEngine.transform.position);
-        carRigidbody.AddTorque(Time.deltaTime * transform.TransformDirection(Vector3.up) * horizontalInput * Turn);
+        carRigidbody.AddForceAtPosition(Time.deltaTime * transform.TransformDirection(Vector3.forward) * Input.GetAxis("Vertical") * Gas, powerEngine.transform.position);
+        carRigidbody.AddTorque(Time.deltaTime * transform.TransformDirection(Vector3.up) * Input.GetAxis("Horizontal") * Turn);
         foreach (GameObject spring in springs)
         {
             RaycastHit hit;
             if (Physics.Raycast(spring.transform.position, transform.TransformDirection(Vector3.down), out hit, 3f))
             {
-                carRigidbody.AddForceAtPosition(Time.deltaTime * transform.TransformDirection(Vector3.up) * Mathf.Pow(3f - hit.distance, 2)/3f * 250f, spring.transform.position);
+                Debug.Log("SpringHitGround");
+                carRigidbody.AddForceAtPosition(Time.deltaTime * transform.TransformDirection(Vector3.down) * Mathf.Pow(3f - hit.distance, 2)/3f * 250f, spring.transform.position);
             }
             Debug.Log(hit.distance);
         }
         carRigidbody.AddForce(-Time.deltaTime * transform.TransformVector(Vector3.right) * transform.InverseTransformVector(carRigidbody.velocity).x * 5f);
-    }
-
-    private void GetInput()
-    {
-        // Steering Input
-        horizontalInput = Input.GetAxis("Horizontal");
-
-        // Acceleration Input
-        verticalInput = Input.GetAxis("Vertical");
-
-        // Breaking Input
-        isBreaking = Input.GetKey(KeyCode.Space);
     }
 
 }
