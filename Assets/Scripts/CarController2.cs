@@ -10,7 +10,7 @@ public class CarController2 : MonoBehaviour {
     public float Drag = 0.98f;
     public float SteerAngle = 20;
     public float Traction = 1;
-    public float MoveVectorCorrection;
+    //public float MoveVectorCorrection;
 
     // Variables
     private Vector3 MoveForce;
@@ -34,10 +34,10 @@ public class CarController2 : MonoBehaviour {
         // Traction
         Debug.DrawRay(transform.position, MoveForce.normalized * 15);
         Debug.DrawRay(transform.position, transform.forward * 15, Color.blue);
-        MoveForce = Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime) * MoveVectorCorrection;
+        //MoveForce = Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime) * MoveVectorCorrection;
 
         //MoveForce ESKI HALI
-        //MoveForce = Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime) * MoveForce.magnitude;
+        MoveForce = Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime) * MoveForce.magnitude;
 
     }
 }
