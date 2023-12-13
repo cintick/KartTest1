@@ -32,9 +32,13 @@ public class CarController2 : MonoBehaviour {
         MoveForce = Vector3.ClampMagnitude(MoveForce, MaxSpeed);
 
         // Traction
-        Debug.DrawRay(transform.position, MoveForce.normalized * 15);
-        Debug.DrawRay(transform.position, transform.forward * 15, Color.blue);
+        Debug.DrawRay(transform.position, MoveForce.normalized * 100);
+        Debug.DrawRay(transform.position, transform.forward * 100, Color.blue);
         //MoveForce = Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime) * MoveVectorCorrection;
+
+        //DENENECEKLER:
+        //  1- Arabayý daha aðýr hissettirmek için steer input lag ? tarzý bir þey
+        //  2- Arabanýn hýzýna göre steer angle'ýn azalmasý
 
         //MoveForce ESKI HALI
         MoveForce = Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime) * MoveForce.magnitude;

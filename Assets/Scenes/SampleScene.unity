@@ -2127,6 +2127,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158833644}
   m_Mesh: {fileID: 447949561}
+--- !u!1 &160071926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4591534441205726005, guid: 6e7d7b8495f886c409bdd1cd7cb79ae3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1800360362}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &161171000
 GameObject:
   m_ObjectHideFlags: 0
@@ -6711,6 +6717,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1800360362}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &512685532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160071926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0db512cf1766244b4a170e55a2a741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 50
+  MaxSpeed: 15
+  Drag: 0.98
+  SteerAngle: 20
+  Traction: 1
 --- !u!1 &513485856
 GameObject:
   m_ObjectHideFlags: 0
@@ -12317,7 +12340,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2303598, y: -0.00028254418, z: 0.00006688566, w: 0.9731055}
+  m_LocalRotation: {x: 0.2303598, y: -0.0002825816, z: 0.00006689453, w: 0.9731055}
   m_LocalPosition: {x: 1.8527673, y: 3.6299999, z: -1.5051315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -29306,35 +29329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: My Car
       objectReference: {fileID: 0}
-    - target: {fileID: 4950549694676354142, guid: 6e7d7b8495f886c409bdd1cd7cb79ae3,
-        type: 3}
-      propertyPath: useUI
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4950549694676354142, guid: 6e7d7b8495f886c409bdd1cd7cb79ae3,
-        type: 3}
-      propertyPath: maxSteeringAngle
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 4950549694676354142, guid: 6e7d7b8495f886c409bdd1cd7cb79ae3,
-        type: 3}
-      propertyPath: accelerationMultiplier
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4950549694676354142, guid: 6e7d7b8495f886c409bdd1cd7cb79ae3,
-        type: 3}
-      propertyPath: decelerationMultiplier
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4950549694676354142, guid: 6e7d7b8495f886c409bdd1cd7cb79ae3,
-        type: 3}
-      propertyPath: handbrakeDriftMultiplier
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5527898820733406329, guid: 6e7d7b8495f886c409bdd1cd7cb79ae3,
         type: 3}
       propertyPath: m_Mass
-      value: 1200
+      value: 12000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e7d7b8495f886c409bdd1cd7cb79ae3, type: 3}
@@ -31673,7 +31671,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988720693}
-  m_LocalRotation: {x: 0.2303598, y: -0.00028254418, z: 0.00006688566, w: 0.9731055}
+  m_LocalRotation: {x: 0.2303598, y: -0.0002825816, z: 0.00006689453, w: 0.9731055}
   m_LocalPosition: {x: 1.8527673, y: 3.6299999, z: -1.5051315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
